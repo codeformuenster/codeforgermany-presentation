@@ -38,12 +38,24 @@ span.bold {
 	background: rgba(32, 184, 247, 1.0 );
 }
 
+.ok-lab-blue .reveal, .ok-lab-blue h3, .ok-lab-blue h2, .ok-lab-blue h1 {
+  color: #fff;
+}
+
 .ok-lab-green .reveal .state-background {
 	background: rgba(36, 217, 162, 1.0 );
 }
 
+.ok-lab-green .reveal, .ok-lab-green h3, .ok-lab-green h2, .ok-lab-green h1 {
+  color: #fff;
+}
+
 .ok-lab-red .reveal .state-background {
 	background: rgba(254, 126, 117, 1.0 );
+}
+
+.ok-lab-red .reveal, .ok-lab-red h3, .ok-lab-red h2, .ok-lab-red h1 {
+  color: #fff;
 }
 
 #how, #goals{
