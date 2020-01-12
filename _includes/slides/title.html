@@ -1,0 +1,13 @@
+<section
+  {% unless include.color == null %} data-state="ok-lab-{{ include.color }}" {% endunless %}
+  {% unless include.id == null %} id="{{ include.id }}" {% endunless %}>
+  {% unless include.h1 == null %}
+  <h1>{{ include.h1 }}</h1>
+  {% endunless %}
+  {% unless include.h2 == null %}
+  <h2>{{ include.h2 }}</h2>
+  {% endunless %}
+  {% unless include.h3 == null %}
+  <h3>{{ include.h3 }}</h3>
+  {% endunless %}
+</section>

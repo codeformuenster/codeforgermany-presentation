@@ -27,7 +27,7 @@
       document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
     </script>
 
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -39,90 +39,49 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section>
-        <img class="logo" src="{{site.baseurl}}/images/CFG_Muenster.svg">
-          <p>Tag der Offenen Daten, 03. März 2018</p>
-          <!--
-          <p>
-            <small class="ok-orange">CODE A DIFFERENCE: Nutz' deine Fähigkeiten, um deine Stadt zu verbessern!</small>
-            <small class="ok-orange">Mach mit für deine Stadt!</small>
-            Wir machen Lösungen für dich und uns
-            Unsere Daten, unsere Stadt, Code for Münster
-          </p>
-          -->
-        </section>
+        {%
+          include slides/0-logo-title-date.html
+          date='07. März 2020'
+        %}
+        {%
+          include slides/title.html
+          color='blue'
+          id='welcome'
+          h1='Open Data Day'
+          h2='Tag der Offenen Daten'
+        %}
+        {%
+          include slides/title.html
+          color='blue'
+          id='photos'
+          h3='Wer nicht fotografiert werden möchte, bitte jetzt oder später melden!'
+        %}
+        {%
+          include slides/title.html
+          color='blue'
+          id='begruessung'
+          h1='Begrüßung'
+        %}
 
-        <section data-state="ok-lab-blue" id="odd">
-          <h1>Tag der Offenen Daten</h1>
-          <h2>Was wünschen sich die<br/>Bürgerinnen und Bürger der Stadt Münster?</h2>
-        </section>
-        <section data-state="ok-lab-blue" id="odd-photos">
-          <h3>Wer nicht fotografiert werden will, bitte jetzt sagen!</h3>
-        </section>
-        <section data-state="ok-lab-blue" id="odd-reden">
-          <h3>Begrüßung</h3>
-        </section>
-        <section data-state="ok-lab-red" id="odd-wir">
-          <h1>Wer sind wir?</h1>
-        </section>
-        <section data-state="ok-lab-red" id="odd-cfm">
-          <h1>Code for Münster</h1>
-          <ul>
-            <li class="fragment">Programmiererinnen</li>
-            <li class="fragment">Designer</li>
-            <li class="fragment">an Offenen Daten Interessierte</li>
-          </ul>
-        </section>
-        <section data-state="ok-lab-red" id="odd-cfm-ziele">
-          <h1>Ziele</h1>
-          <ul>
-            <li class="fragment">nützliche Anwendungen und Visualisierungen rund um Offene Daten erstellen</li>
-            <li class="fragment">an digitalen Werkzeugen für Bürgerinnen arbeiten</li>
-            <li class="fragment">mehr Transparenz</li>
-            <li class="fragment">Bekanntheit und Potential von Offenen Daten steigern</li>
-          </ul>
-        </section>
-        <section data-state="ok-lab-blue" id="odd-cfg">
-          <h1>Code for<br/>Germany</h1>
-        </section>
-        <section data-state="ok-lab-blue" id="odd-cfg-b">
-          <p>Open Knowledge Foundation Deutschland in Partnerschaft mit Code for America und aktiven Teams in ganz Deutschland</p>
-          <p>&nbsp;</p>
-          <code>&raquo;Ziel des Programms ist es, Entwicklungen im Bereich Transparenz, Open Data und Civic Tech in Deutschland zu fördern.&laquo;</code>
-        </section>
+        {%
+          include slides/wer-sind-wir.html
+          color='red'
+        %}
+        {%
+          include slides/code-for-germany.html
+          color='blue'
+        %}
+        {%
+          include slides/organisation.html
+          color='blue'
+        %}
 
-        <section data-state="ok-lab-green" id="projekte">
-          <h1>Projekte</h1>
-          <ul>
-            <li class="fragment">Mein MS <a href="https://mein-ms.de/">mein-ms.de</a></li>
-            <li class="fragment">Verkehrsdaten-Analyse <a href="https://traffics.codeformuenster.org/">traffics.codeformuenster.org</a></li>
-            <li class="fragment">Open Events <a href="http://events.input23.de/">events.input23.de</a></li>
-            <li class="fragment">Weihnachtsmarkt <a href="http://codeformuenster.org/weihnachtsmarkt/">codeformuenster.org/weihnachtsmarkt</a></li>
-            <li class="fragment">Was steckt in meinem Trinkwasser <a href="http://codeformuenster.org/trinkwasser/">codeformuenster.org/trinkwasser</a></li>
-            <li class="fragment">Parkleit Scraper <a href="https://github.com/codeformuenster/parkleit-scraper">github.com/codeformuenster/parkleit-scraper</a></li>
-            <li class="fragment">Click that hood <a href="http://click-that-hood.com/muenster">click-that-hood.com/muenster</a></li>
-          </ul>
-        </section>
-        <section data-state="ok-lab-red" id="organisation">
-          <h1>Organisation</h1>
-          <p>&nbsp;</p>
-          <h2 class="fragment">Hacknights</h2>
-          <p class="fragment">dienstags, 18:30 Uhr, im drei:klang, Wolbecker Straße</p>
-          <p class="fragment">hacken/coden an unseren Projekten</p>
-          <p>&nbsp;</p>
-          <h2 class="fragment">Teilnahme an externen Events</h2>
-          <p class="fragment">regelmäßige Teilname an externen Events</p>
-          <p class="fragment">z.B.: Hackathons, NRW-übergreifende Organisation</p>
-        </section>
-        <section data-state="ok-lab-red" id="organisation-2">
+        {%
+          include slides/projekte.html
+          color='green'
+        %}
 
-          <!-- <blockquote class="twitter-tweet" data-lang="en"><p lang="de" dir="ltr">Heute ist full house bei der Hacknight im Drei:Klang. Wir bereiten den <a href="https://twitter.com/hashtag/opendataday?src=hash">#opendataday</a> vor! <a href="https://twitter.com/hashtag/opendata?src=hash">#opendata</a> <a href="https://twitter.com/hashtag/m%C3%BCnster?src=hash">#münster</a> <a href="https://t.co/tcUo96EyJC">pic.twitter.com/tcUo96EyJC</a></p>&mdash; codeformuenster (@codeformuenster) <a href="https://twitter.com/codeformuenster/status/821425972029362177">January 17, 2017</a></blockquote> -->
 
-          <blockquote class="twitter-tweet" data-lang="en"><p lang="de" dir="ltr">Letzte Vorbereitungen für den <a href="https://twitter.com/hashtag/OpenDataDay?src=hash">#OpenDataDay</a> - das Forum für Bürgerbeteiligung in Münster. Am Samstag ab 10:00 Uhr im Forum der VHS <a href="https://t.co/9ZiGbfOkWM">pic.twitter.com/9ZiGbfOkWM</a></p>&mdash; codeformuenster (@codeformuenster) <a href="https://twitter.com/codeformuenster/status/836655737065586688">February 28, 2017</a></blockquote>
-
-          <blockquote class="twitter-tweet" data-lang="en"><p lang="de" dir="ltr">So, die <a href="https://twitter.com/hashtag/openDataDay?src=hash&amp;ref_src=twsrc%5Etfw">#openDataDay</a> Planung steht! Jetzt noch ein bißchen hacken im <a href="https://twitter.com/hashtag/cafeDreiKlang?src=hash&amp;ref_src=twsrc%5Etfw">#cafeDreiKlang</a>. <a href="https://t.co/d6cb2DpL31">pic.twitter.com/d6cb2DpL31</a></p>&mdash; codeformuenster (@codeformuenster) <a href="https://twitter.com/codeformuenster/status/958428339487821825?ref_src=twsrc%5Etfw">January 30, 2018</a></blockquote>
-
-        </section>
 
         <section data-state="ok-lab-red" id="unser-2017">
           <h1>Unser 2017</h1>
